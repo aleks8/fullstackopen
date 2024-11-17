@@ -14,12 +14,14 @@ const Statistics = (props) => {
       <div> 
       <h1>statistics</h1>
       <table>
-        <StatisticLine text="good" value ={props.good} perc=""/>
-        <StatisticLine text="neutral" value ={props.neutral} perc=""/>
-        <StatisticLine text="bad" value ={props.bad} perc=""/>
-        <StatisticLine text="all" value ={props.good+props.neutral+props.bad} perc=""/>
-        <StatisticLine text="average" value ={(props.good+props.neutral+props.bad)/3} perc=""/>
-        <StatisticLine text="positive" value ={(props.good/(props.good+props.neutral+props.bad))*100} perc="%"/>
+        <tbody>
+          <StatisticLine text="good" value ={props.good} perc=""/>
+          <StatisticLine text="neutral" value ={props.neutral} perc=""/>
+          <StatisticLine text="bad" value ={props.bad} perc=""/>
+          <StatisticLine text="all" value ={props.good+props.neutral+props.bad} perc=""/>
+          <StatisticLine text="average" value ={(props.good+props.neutral+props.bad)/3} perc=""/>
+          <StatisticLine text="positive" value ={(props.good/(props.good+props.neutral+props.bad))*100} perc="%"/>
+        </tbody>
       </table>
       </div>  
     )
