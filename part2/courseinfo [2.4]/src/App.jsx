@@ -47,7 +47,7 @@ const Total = (props) => {
 }
 
 const Course = (props) => {
-  console.log('props',props)
+  //console.log('props',props)
   return (
       //console.log(props.name)
       //<Header course={props.course} />
