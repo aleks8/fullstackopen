@@ -1,0 +1,8 @@
+//POST http://localhost:3001/api/persons
+POST https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "Joy Gou",
+    "number": "111-1111"
+}
