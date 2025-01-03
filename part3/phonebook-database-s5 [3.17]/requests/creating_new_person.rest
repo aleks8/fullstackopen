@@ -1,0 +1,11 @@
+//this PUT request is for the 3.17 alternative answer 
+//PUT http://localhost:3001/api/persons/67733f83410c49b8726bb98d
+//these POST requests can also be used for 3.17 
+//POST http://localhost:3001/api/persons
+//POST https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "Ada Lovelace",
+    "number": "222-1111"
+}
