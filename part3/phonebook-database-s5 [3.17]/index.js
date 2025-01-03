@@ -116,6 +116,7 @@ app.post('/api/persons', function(request, response, next)  {
         console.log('person_id',JSON.stringify(person[0]._id))
         const id = JSON.stringify(person[0]._id)
         //app.put('/api/persons/:'+person[0]._id, (request, response, person[0]._id, next) => {
+        //one of the 3.17 answers with a POST command instead of PUT 
           const body = request.body
         
           const person2 = {
