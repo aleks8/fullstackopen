@@ -1,0 +1,2 @@
+//DELETE http://localhost:3001/api/persons/67769c85cff8e306ae1b48c2
+DELETE https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons/67769dffcff8e306ae1b48ca
