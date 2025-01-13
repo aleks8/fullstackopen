@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
-//changed URI from mongodb+srv://allie8888:B1drYL4bvtYn51Kw@cluster0.rf62c.mongodb.net/personApp?retryWrites=true&w=majority&appName=Cluster0
+
 const blogSchema = new mongoose.Schema({
   title: String,
   author: String,
