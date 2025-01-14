@@ -18,7 +18,6 @@ mongoose.connect(config.MONGODB_URI)
   .catch((error) => {
     logger.error('error connection to MongoDB:', error.message)
   })
-//changed URI from mongodb+srv://allie8888:B1drYL4bvtYn51Kw@cluster0.rf62c.mongodb.net/personApp?retryWrites=true&w=majority&appName=Cluster0
 
 
 app.use(cors())
