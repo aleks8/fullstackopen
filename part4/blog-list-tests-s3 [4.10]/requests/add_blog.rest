@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+//POST https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "title": "Blog 6",
+    "author": "ML",
+    "url": "www.google.com",
+    "likes": "120"  
+}
