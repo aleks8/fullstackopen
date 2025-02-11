@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+//POST https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "title": "React patterns4",
+    "author": "Michael Chan",
+    "url": "https://reactpatterns.com/",
+    "likes": "7",
+    "user": "67a9697ca984f0ce0b582e53"
+}
