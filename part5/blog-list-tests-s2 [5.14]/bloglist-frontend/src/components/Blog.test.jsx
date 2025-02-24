@@ -42,10 +42,10 @@ test('clicking view shows the url and number of likes', async () => {
     //important: true
   }
   
-
-  const mockHandler = vi.fn()
+  const loggedUserName = 'Matti Luukkainen'
+  //const mockHandler = vi.fn() onClick={mockHandler}
   render(
-    <Blog blog={blog} onClick={mockHandler} />  )
+    <Blog blog={blog}  loggedUserName={loggedUserName}/>  )
 
   //screen.debug()
 
