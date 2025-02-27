@@ -173,22 +173,22 @@ const changeLikes = async (blog) => {
       console.log('newLikesBlogUserId', newLikesBlogUserId)
       console.log('newLikesBlogId', newLikesBlogId)
       //console.log('newLikes',newLikes)newLikesBlogUserId ||
-      const newBlogObject = {...blog, likes: newLikes}
-      console.log('newBlogObject', newBlogObject)
-      console.log('newLikesBlogId', newLikesBlogId)
-      /*const newBlogObject = {
+      //const newBlogObject = {...blog, likes: newLikes}
+      //console.log('newBlogObject', newBlogObject)
+      //console.log('newLikesBlogId', newLikesBlogId)
+      const newBlogObject = {
         title: blog.title,
         author: blog.author,
         url: blog.url,
         likes: newLikes,
-        user: blog.user
-      }*/
+        user: blog.user.id
+      }
       /* await api
       .put('/api/blogs/{')
       .send(newBlog)*/
       //need to add pass setBlogs?
       //console.log('blog.user.name here', blog.user.name)
-      //if(blogs) {
+      if(blogs) {
       blogService
         .update(newLikesBlogId, newBlogObject)
         .then((returnedBlog) => {
@@ -203,7 +203,7 @@ const changeLikes = async (blog) => {
           }, 5000)
           setBlogs(blogs.filter((b) => b.id !== newLikesBlogId))
         })
-      //}
+      }
       //const updateBlogUser = await User.findById(newBlogObject.user)
       /*blogService.getAll().then(blogs =>
             setAllBlogs( blogs ))*/
