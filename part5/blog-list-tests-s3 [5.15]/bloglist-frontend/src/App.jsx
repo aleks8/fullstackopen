@@ -184,12 +184,13 @@ const App = () => {
         setAllBlogs( blogs )
       )
       console.log('allblogshere',allBlogs2)*/
-      if(allBlogs) {
-      const newLikesBlog = allBlogs.find(((blogfromlist) => blogfromlist.title === blog.title))
+      if(blogs) {
+      const newLikesBlog = blogs.find(((blogfromlist) => blogfromlist.title === blog.title))
       const newLikesBlogId = newLikesBlog.id
       const newLikesBlogUserId = newLikesBlog.user.id
       console.log('newLikesBlog', newLikesBlog)
-      console.log('newLikesBlogUserId', newLikesBlogUserId)}
+      console.log('newLikesBlog.id', newLikesBlog.id)
+      console.log('newLikesBlogUserId', newLikesBlogUserId)
       //console.log('newLikesBlogId', newLikesBlogId)
       //console.log('newLikes',newLikes)newLikesBlogUserId ||
       const newBlogObject = {
@@ -197,18 +198,18 @@ const App = () => {
         author: blog.author,
         url: blog.url,
         likes: newLikes,
-        user: blog.user
+        user: blog.user.id
       }
       /* await api
       .put('/api/blogs/{')
       .send(newBlog)*/
       //need to add pass setBlogs?
       //console.log('blog.user.name here', blog.user.name)
-      if(allBlogs) {
+      if(blogs) {
       blogService
         .update(newLikesBlogId, newBlogObject)
         .then((returnedBlog) => {
-          setAllBlogs(allBlogs.map((blog) => (blog.id !== newLikesBlogId ? blog : returnedBlog)))
+          setBlogs(blogs.map((blog) => (blog.id !== newLikesBlogId ? blog : returnedBlog)))
         })
         .catch((error) => {
           setErrorMessage(
@@ -217,9 +218,9 @@ const App = () => {
           setTimeout(() => {
             setErrorMessage(null)
           }, 5000)
-          setAllBlogs(allBlogs.filter((b) => b.id !== newLikesBlogId))
+          setBlogs(blogs.filter((b) => b.id !== newLikesBlogId))
         })
-      }
+      }}
       //const updateBlogUser = await User.findById(newBlogObject.user)
       /*blogService.getAll().then(blogs =>
             setAllBlogs( blogs ))*/
