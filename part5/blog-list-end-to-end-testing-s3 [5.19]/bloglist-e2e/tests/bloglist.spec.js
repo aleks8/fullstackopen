@@ -100,6 +100,11 @@ describe('BlogList', () => {
     test.only('a new blog can be created', async ({ page }) => {
       await createBlog(page, 'Refactoring Test4', 'Martin Fowler4', 'www.martinfref4.com')
       await expect(page.getByText('a new blog Refactoring Test4 by Martin Fowler4 added')).toBeVisible()
+    
+      const otherBlogText = await page.getByText('Refactoring Test4')      
+      const otherBlogElement = await otherBlogText.locator('..')
+      await otherBlogElement.getByRole('button', { name: 'view' }).click()
+      await expect(otherBlogElement.getByText('www.martinfref4.com')).toBeVisible()
     })
   })  
 
