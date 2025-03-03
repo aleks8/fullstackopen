@@ -238,6 +238,7 @@ describe('BlogList', () => {
       await expect(otherBlogElement.getByText('Refactoring Test4')).toBeVisible()
       await expect(otherBlogElement.getByText('Matti Luukkainen')).toBeVisible()
       //await otherBlogElement.getByRole('button', { name: 'remove' }).not.toBeVisible()
+      await expect(page.getByRole('button', { name: 'remove' })).not.toBeVisible()
       await expect(page.getByText('remove')).not.toBeVisible()
     //  const otherBlogText = await page.getByText('Refactoring Test4')      
     //  const otherBlogElement = await otherBlogText.locator('..')
