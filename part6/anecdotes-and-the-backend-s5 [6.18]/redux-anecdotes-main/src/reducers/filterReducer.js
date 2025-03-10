@@ -1,0 +1,55 @@
+import { createSlice } from "@reduxjs/toolkit"
+
+//6.10 answer
+const filterSlice = createSlice({
+  name: 'filter',
+  initialState: '',
+  reducers: {
+    filterChange(state, action) {
+      //console.log('statehere', current(state))
+      //console.log('stateinFC', state)
+      return action.payload
+    },
+  },
+})
+/*
+const filterReducer = (state = 'ALL', action) => {
+    
+    switch (action.type) {
+      case 'SET_FILTER':
+        
+ /*       return action.payload
+      default:
+        return state
+    }
+  }
+  
+  export const filterChange = filter => {
+    return {
+      type: 'SET_FILTER',
+      payload: filter,
+    }
+  }
+
+  
+  export default filterReducer*/
+
+  export const { filterChange } = filterSlice.actions
+  export default filterSlice.reducer
+
+  /*
+  //console.log('action.payload', action.payload)
+        //console.log('filter', state.anecdotes.filter(a => a.includes(action.payload) === true))
+        //return state.filter(a => a.includes(action.payload) === true)
+        /*filterText = action.payload.id
+        //console.log('idhere', id)
+        voteToChange = state.find(a => a.id === id)
+        //console.log('voteToChange', voteToChange)
+        changedVote = { ...voteToChange, votes: voteToChange.votes + 1 }
+        //console.log('state.votes', voteToChange.votes)
+        //console.log('changeVote', changedVote)
+        //state.sort((a, b) => b.votes - a.votes)
+        return state.map(vote =>
+          vote.id !== id ? vote : changedVote 
+        )*/
+  
