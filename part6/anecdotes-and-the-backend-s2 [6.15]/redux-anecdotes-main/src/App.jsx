@@ -7,7 +7,7 @@ import anecdoteService from './services/anecdotes'
 import { setAnecdotes } from './reducers/anecdoteReducer'
 import { useDispatch } from 'react-redux'
 
-//6.14 and 6.15 submissions are identical because solved both 
+//6.14 and 6.15 submissions are identical 
 const App = () => {
   const dispatch = useDispatch()  
   useEffect(() => {    
