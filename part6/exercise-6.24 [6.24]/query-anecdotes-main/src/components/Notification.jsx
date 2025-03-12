@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import {useNotificationValue} from '../NotificationContext'
 
-const Notification = ({notificationDisplay}) => {
+const Notification = () => {
   
   const style = {
     border: 'solid',
@@ -9,6 +9,8 @@ const Notification = ({notificationDisplay}) => {
     borderWidth: 1,
     marginBottom: 5
   }
+  const notificationValue = useNotificationValue()
+  console.log('NOTIFICATIONHERE', notificationValue)
   /*const notificationValue = useNotificationValue()
   console.log('notificationValue', notificationValue)
   //if (true) return null
@@ -21,9 +23,10 @@ const Notification = ({notificationDisplay}) => {
   }*/
   
 //{notification}
+  //{notificationDisplay}
   return (
     <div style={style}>
-      {notificationDisplay}
+      {notificationValue}
     </div>
   )
 }
