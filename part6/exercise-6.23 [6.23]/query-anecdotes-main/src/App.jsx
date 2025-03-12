@@ -105,7 +105,7 @@ const App = () => {
     <div>
       <h3>Anecdote app</h3>
     
-      <Notification notificationDisplay={notificationValue}/>
+      <Notification />
       <AnecdoteForm/>
     
       {anecdotes.map(anecdote =>
