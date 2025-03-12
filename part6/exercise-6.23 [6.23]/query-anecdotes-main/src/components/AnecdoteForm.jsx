@@ -35,15 +35,6 @@ const AnecdoteForm = () => {
         dispatch({ type: 'CLEAR_NOTIFICATION' });
       }, 5000)
       setNotificationDisplay('You added2 '+newAnecdote.content)*/
-    },
-    onError: (error) => { 
-      //console.log('error', error)
-      //console.log('errorresponse', error.response.data.error)
-      dispatch({type: 'ERROR', payload: error.response.data.error})
-      setTimeout(() => {
-        //setNotificationDisplay('Add anecdote or vote')
-        dispatch({ type: 'CLEAR_NOTIFICATION' });
-      }, 5000)
     }
 
   })
