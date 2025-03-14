@@ -109,7 +109,12 @@ name='info' value={info} onChange={(e)=> setInfo(e.target.value)}
 
             onSubmit={handleSubmit}
 */
-
+  const resetAll = () => {
+    content.reset
+    author.reset
+    info.reset
+  }
+  
   return (
     <div>
       <h2>create a new anecdote</h2>
@@ -123,8 +128,7 @@ name='info' value={info} onChange={(e)=> setInfo(e.target.value)}
           url for more info
           <input {...info} />
           <br />
-        <button onClick={handleSubmit}>create</button> <button onClick = 
-          {content.reset + author.reset + info.reset}
+        <button onClick={handleSubmit}>create</button> <button onClick = {resetAll}
         >reset</button>
       </form>
     </div>
