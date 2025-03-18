@@ -33,7 +33,6 @@ const blogSlice = createSlice({
 
 export const { incrementBlog, appendBlog, setBlogs } = blogSlice.actions
 
-//6.16 answer 
 export const initializeBlogs = () => {  
   return async dispatch => {    
     const blogs = await blogService.getAll()    
@@ -41,7 +40,6 @@ export const initializeBlogs = () => {
   }
 }
 
-//6.17 answer 
 export const createBlog = newObject => {  
   return async dispatch => {    
     const newBlog = await blogService.create(newObject)    
@@ -49,12 +47,11 @@ export const createBlog = newObject => {
   }
 }
 
-//6.18 answer
 export const udpateBlogVotes = (id, voteToChange) => {  
   return async dispatch => {   
-    //console.log('anecdoteshere', anecdotes) 
-    //const anecdotes = await anecdoteService.getAll() 
-    //const voteToChange = anecdotes.find(a => a.id === id)
+    //console.log('bhere', blogs) 
+    //const b = await blogService.getAll() 
+    //const voteToChange = b.find(a => a.id === id)
     const changedVote = { ...voteToChange, votes: voteToChange.votes + 1 }
     await blogService.updateVotes(id, changedVote)    
     dispatch(incrementAnecdote(id))  
