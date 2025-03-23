@@ -1,0 +1,16 @@
+POST http://localhost:3003/api/login
+//POST https://phonebook-backend-cool-waterfall-1089.fly.dev/api/persons
+Content-Type: application/json
+
+//{
+ //   "username": "dabromov",
+ //   "name": "Dan Abromov",
+ //   "password": "DanPassword"
+//}
+{
+    "username": "mluukkai",
+    //"name": "Matti Luukkainen2",
+    "password": "Mattipassword"
+}
+
+//I think username hellas is password Artopassword
