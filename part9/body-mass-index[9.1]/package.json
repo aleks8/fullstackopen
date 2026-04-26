@@ -1,0 +1,25 @@
+{
+  "name": "part-9-proj",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "ts-node": "ts-node",
+    "multiply": "ts-node multiplier.ts",
+    "calculate": "ts-node calculator.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/lodash": "^4.17.24",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
